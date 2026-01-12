@@ -1,0 +1,646 @@
+{
+  "source_base_path": "C:/Users/james westoby/source/repos/ase-boose-assignment-Jwestoby23/ASE",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ASE.ASECanvas.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ASE.ASECanvas.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.ASECanvas",
+      "Summary": "<p sourcefile=\"api/ASE.ASECanvas.yml\" sourcestartlinenumber=\"1\">Concrete application canvas that implements both <xref href=\"ASE.IappInterface\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"ASE.ISavableCanvas\" data-throw-if-not-resolved=\"false\"></xref>.\nProvides drawing primitives using GDI+ and maintains an internal bitmap for rendering.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ASE.AppCommandFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ASE.AppCommandFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.AppCommandFactory",
+      "Summary": "<p sourcefile=\"api/ASE.AppCommandFactory.yml\" sourcestartlinenumber=\"1\">Factory that maps command names used by the ASE language to concrete <xref href=\"BOOSE.ICommand\" data-throw-if-not-resolved=\"false\"></xref> implementations.\nThe factory returns the appropriate command object given a canonical command type string.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ASE.Ase_Form.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ASE.Ase_Form.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.Ase_Form",
+      "Summary": "<p sourcefile=\"api/ASE.Ase_Form.yml\" sourcestartlinenumber=\"1\">Main Windows Forms UI for the ASE application.\nHosts the input textbox, execute/save buttons and a PictureBox used to display the canvas bitmap.\nDelegates execution and saving actions to <xref href=\"ASE.Ase_Form.appBoose\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ASE.ISavableCanvas.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ASE.ISavableCanvas.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.ISavableCanvas",
+      "Summary": "<p sourcefile=\"api/ASE.ISavableCanvas.yml\" sourcestartlinenumber=\"1\">Indicates that a canvas implementation can save its current bitmap to disk.\nImplementations should persist the visible canvas image to the provided file path.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ASE.IappInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ASE.IappInterface.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.IappInterface",
+      "Summary": "<p sourcefile=\"api/ASE.IappInterface.yml\" sourcestartlinenumber=\"1\">Extended application canvas interface that exposes floating-point drawing primitives\nin addition to the standard <xref href=\"BOOSE.ICanvas\" data-throw-if-not-resolved=\"false\"></xref> operations.\nImplementors are expected to provide both integer- and float-based circle/rectangle methods.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ASE.NoCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ASE.NoCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.NoCommand",
+      "Summary": "<p sourcefile=\"api/ASE.NoCommand.yml\" sourcestartlinenumber=\"1\">Placeholder command used for lines that should be ignored (for example comment markers).\nImplements the basic command lifecycle but performs no action during Compile or Execute.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ASE.appAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ASE.appAdapter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appAdapter",
+      "Summary": "<p sourcefile=\"api/ASE.appAdapter.yml\" sourcestartlinenumber=\"1\">Adapts an object that implements <xref href=\"ASE.IappInterface\" data-throw-if-not-resolved=\"false\"></xref> so it can be used where an <xref href=\"BOOSE.ICanvas\" data-throw-if-not-resolved=\"false\"></xref> is required.\nAll calls are forwarded to the wrapped <xref href=\"ASE.IappInterface\" data-throw-if-not-resolved=\"false\"></xref> instance.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ASE.appArray.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ASE.appArray.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appArray",
+      "Summary": "<p sourcefile=\"api/ASE.appArray.yml\" sourcestartlinenumber=\"1\">Base implementation for array support in the ASE language.\nProvides compile-time parsing and runtime handling for both integer and real arrays,\nand helper routines used by concrete array commands (peek/poke).</p>\n<p sourcefile=\"api/ASE.appArray.yml\" sourcestartlinenumber=\"5\">Responsibilities:</p>\n<ul sourcefile=\"api/ASE.appArray.yml\" sourcestartlinenumber=\"6\">\n<li sourcefile=\"api/ASE.appArray.yml\" sourcestartlinenumber=\"6\">Parse and validate array declarations (type, name, size) during <xref href=\"ASE.appArray.Compile\" data-throw-if-not-resolved=\"false\"></xref>.</li>\n<li sourcefile=\"api/ASE.appArray.yml\" sourcestartlinenumber=\"7\">Allocate array storage on <xref href=\"ASE.appArray.Execute\" data-throw-if-not-resolved=\"false\"></xref>.</li>\n<li sourcefile=\"api/ASE.appArray.yml\" sourcestartlinenumber=\"8\">Support reading and writing array elements through <xref href=\"ASE.appArray.GetIntArray(System.Int32%2cSystem.Int32)\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"ASE.appArray.GetRealArray(System.Int32%2cSystem.Int32)\" data-throw-if-not-resolved=\"false\"></xref>,\n<xref href=\"ASE.appArray.SetIntArray(System.Int32%2cSystem.Int32%2cSystem.Int32)\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"ASE.appArray.SetRealArray(System.Double%2cSystem.Int32%2cSystem.Int32)\" data-throw-if-not-resolved=\"false\"></xref>.</li>\n<li sourcefile=\"api/ASE.appArray.yml\" sourcestartlinenumber=\"10\">Provide parameter processing helpers (<xref href=\"ASE.appArray.ProcessArrayParametersCompile(System.Boolean)\" data-throw-if-not-resolved=\"false\"></xref> and\n<xref href=\"ASE.appArray.ProcessArrayParametersExecute(System.Boolean)\" data-throw-if-not-resolved=\"false\"></xref>) used by peek/poke derived commands.</li>\n</ul>\n<p sourcefile=\"api/ASE.appArray.yml\" sourcestartlinenumber=\"13\">Note: this class uses MessageBox calls to report user-visible errors to match the\nexisting application's UX conventions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ASE.appBoose.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ASE.appBoose.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appBoose",
+      "Summary": "<p sourcefile=\"api/ASE.appBoose.yml\" sourcestartlinenumber=\"1\">Facade and runtime coordinator for the ASE application.\nManages the application canvas, command factory, parser and stored program.\nExposes a minimal API used by the UI to run parsed programs and retrieve the canvas bitmap.\nThis class implements a thread-safe lazy singleton via <xref href=\"ASE.appBoose.CreateInstance\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ASE.appInt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ASE.appInt.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appInt",
+      "Summary": "<p sourcefile=\"api/ASE.appInt.yml\" sourcestartlinenumber=\"1\">Represents an integer variable/command in the ASE language.\nThe class can register itself with a <xref href=\"BOOSE.StoredProgram\" data-throw-if-not-resolved=\"false\"></xref> and updates the program value when executed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ASE.appParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ASE.appParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appParser",
+      "Summary": "<p sourcefile=\"api/ASE.appParser.yml\" sourcestartlinenumber=\"1\">Application-specific parser that converts a single line of ASE language into an <xref href=\"BOOSE.ICommand\" data-throw-if-not-resolved=\"false\"></xref>.\nExtends the generic <xref href=\"BOOSE.Parser\" data-throw-if-not-resolved=\"false\"></xref> to add ASE-specific preprocessing, comment handling and\nassignment resolution where the left-hand side references an existing variable.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ASE.appPeek.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ASE.appPeek.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appPeek",
+      "Summary": "<p sourcefile=\"api/ASE.appPeek.yml\" sourcestartlinenumber=\"1\">Implements the &quot;peek&quot; array command which reads a value from an existing array variable\nand assigns it into another variable.\nParsing of the textual parameters, index evaluation and array access are delegated to the helper logic\nimplemented on <xref href=\"ASE.appArray\" data-throw-if-not-resolved=\"false\"></xref>.\nThis command reports user-visible problems using MessageBox calls to match the existing application's UX.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ASE.appPoke.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ASE.appPoke.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appPoke",
+      "Summary": "<p sourcefile=\"api/ASE.appPoke.yml\" sourcestartlinenumber=\"1\">Implements the &quot;poke&quot; array command which writes a value into an existing array variable.\nUses the array helper logic provided by <xref href=\"ASE.appArray\" data-throw-if-not-resolved=\"false\"></xref> to parse parameters at compile time\nand to perform the write at runtime.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ASE.appReal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ASE.appReal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appReal",
+      "Summary": "<p sourcefile=\"api/ASE.appReal.yml\" sourcestartlinenumber=\"1\">Represents a real (double) variable in the ASE language.\nRegisters itself with the active <xref href=\"BOOSE.StoredProgram\" data-throw-if-not-resolved=\"false\"></xref> during compilation\nand updates the stored program value when executed.\nThe class exposes a <xref href=\"ASE.appReal.real\" data-throw-if-not-resolved=\"false\"></xref> property that holds the double backing value.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ASE.appStoredProgram.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ASE.appStoredProgram.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appStoredProgram",
+      "Summary": "<p sourcefile=\"api/ASE.appStoredProgram.yml\" sourcestartlinenumber=\"1\">Application-specific <xref href=\"BOOSE.StoredProgram\" data-throw-if-not-resolved=\"false\"></xref> implementation.\nResponsibilities:</p>\n<ul sourcefile=\"api/ASE.appStoredProgram.yml\" sourcestartlinenumber=\"3\">\n<li sourcefile=\"api/ASE.appStoredProgram.yml\" sourcestartlinenumber=\"3\">Store and locate ASE variables.</li>\n<li sourcefile=\"api/ASE.appStoredProgram.yml\" sourcestartlinenumber=\"4\">Maintain a separate double backing for <xref href=\"ASE.appReal\" data-throw-if-not-resolved=\"false\"></xref> variables and update both backing and textual value\nwhen <xref href=\"ASE.appStoredProgram.UpdateVariable(System.String%2cSystem.Double)\" data-throw-if-not-resolved=\"false\"></xref> is called.</li>\n<li sourcefile=\"api/ASE.appStoredProgram.yml\" sourcestartlinenumber=\"6\">Evaluate numeric expressions substituting <xref href=\"ASE.appReal.real\" data-throw-if-not-resolved=\"false\"></xref> for real variables and <xref href=\"BOOSE.Evaluation.Value\" data-throw-if-not-resolved=\"false\"></xref>\nfor other variables before computing the result.</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ASE.appWrite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ASE.appWrite.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appWrite",
+      "Summary": "<p sourcefile=\"api/ASE.appWrite.yml\" sourcestartlinenumber=\"1\">Implements the &quot;write&quot; command which outputs text to the canvas.\nExecution order:</p>\n<ul sourcefile=\"api/ASE.appWrite.yml\" sourcestartlinenumber=\"3\">\n<li sourcefile=\"api/ASE.appWrite.yml\" sourcestartlinenumber=\"3\">Attempt to evaluate the parameter as an expression via the program.</li>\n<li sourcefile=\"api/ASE.appWrite.yml\" sourcestartlinenumber=\"4\">If the evaluation fails, treat the parameter as a variable name and write its value.</li>\n<li sourcefile=\"api/ASE.appWrite.yml\" sourcestartlinenumber=\"5\">Otherwise treat the parameter as a literal text string and write it.</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ASE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ASE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ase/ASE.ASECanvas.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ase/ASE.ASECanvas.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.ASECanvas",
+      "Summary": "<p sourcefile=\"api/ase/ASE.ASECanvas.yml\" sourcestartlinenumber=\"1\">Concrete application canvas that implements both <xref href=\"ASE.IappInterface\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"ASE.ISavableCanvas\" data-throw-if-not-resolved=\"false\"></xref>.\nProvides drawing primitives using GDI+ and maintains an internal bitmap for rendering.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ase/ASE.AppCommandFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ase/ASE.AppCommandFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.AppCommandFactory",
+      "Summary": "<p sourcefile=\"api/ase/ASE.AppCommandFactory.yml\" sourcestartlinenumber=\"1\">Factory that maps command names used by the ASE language to concrete <xref href=\"BOOSE.ICommand\" data-throw-if-not-resolved=\"false\"></xref> implementations.\nThe factory returns the appropriate command object given a canonical command type string.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ase/ASE.Ase_Form.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ase/ASE.Ase_Form.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.Ase_Form",
+      "Summary": "<p sourcefile=\"api/ase/ASE.Ase_Form.yml\" sourcestartlinenumber=\"1\">Main Windows Forms UI for the ASE application.\nHosts the input textbox, execute/save buttons and a PictureBox used to display the canvas bitmap.\nDelegates execution and saving actions to <xref href=\"ASE.Ase_Form.appBoose\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ase/ASE.ISavableCanvas.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ase/ASE.ISavableCanvas.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.ISavableCanvas",
+      "Summary": "<p sourcefile=\"api/ase/ASE.ISavableCanvas.yml\" sourcestartlinenumber=\"1\">Indicates that a canvas implementation can save its current bitmap to disk.\nImplementations should persist the visible canvas image to the provided file path.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ase/ASE.IappInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ase/ASE.IappInterface.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.IappInterface",
+      "Summary": "<p sourcefile=\"api/ase/ASE.IappInterface.yml\" sourcestartlinenumber=\"1\">Extended application canvas interface that exposes floating-point drawing primitives\nin addition to the standard <xref href=\"BOOSE.ICanvas\" data-throw-if-not-resolved=\"false\"></xref> operations.\nImplementors are expected to provide both integer- and float-based circle/rectangle methods.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ase/ASE.NoCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ase/ASE.NoCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.NoCommand",
+      "Summary": "<p sourcefile=\"api/ase/ASE.NoCommand.yml\" sourcestartlinenumber=\"1\">Placeholder command used for lines that should be ignored (for example comment markers).\nImplements the basic command lifecycle but performs no action during Compile or Execute.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ase/ASE.appAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ase/ASE.appAdapter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appAdapter",
+      "Summary": "<p sourcefile=\"api/ase/ASE.appAdapter.yml\" sourcestartlinenumber=\"1\">Adapts an object that implements <xref href=\"ASE.IappInterface\" data-throw-if-not-resolved=\"false\"></xref> so it can be used where an <xref href=\"BOOSE.ICanvas\" data-throw-if-not-resolved=\"false\"></xref> is required.\nAll calls are forwarded to the wrapped <xref href=\"ASE.IappInterface\" data-throw-if-not-resolved=\"false\"></xref> instance.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ase/ASE.appArray.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ase/ASE.appArray.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appArray",
+      "Summary": "<p sourcefile=\"api/ase/ASE.appArray.yml\" sourcestartlinenumber=\"1\">Base implementation for array support in the ASE language.\nProvides compile-time parsing and runtime handling for both integer and real arrays,\nand helper routines used by concrete array commands (peek/poke).</p>\n<p sourcefile=\"api/ase/ASE.appArray.yml\" sourcestartlinenumber=\"5\">Responsibilities:</p>\n<ul sourcefile=\"api/ase/ASE.appArray.yml\" sourcestartlinenumber=\"6\">\n<li sourcefile=\"api/ase/ASE.appArray.yml\" sourcestartlinenumber=\"6\">Parse and validate array declarations (type, name, size) during <xref href=\"ASE.appArray.Compile\" data-throw-if-not-resolved=\"false\"></xref>.</li>\n<li sourcefile=\"api/ase/ASE.appArray.yml\" sourcestartlinenumber=\"7\">Allocate array storage on <xref href=\"ASE.appArray.Execute\" data-throw-if-not-resolved=\"false\"></xref>.</li>\n<li sourcefile=\"api/ase/ASE.appArray.yml\" sourcestartlinenumber=\"8\">Support reading and writing array elements through <xref href=\"ASE.appArray.GetIntArray(System.Int32%2cSystem.Int32)\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"ASE.appArray.GetRealArray(System.Int32%2cSystem.Int32)\" data-throw-if-not-resolved=\"false\"></xref>,\n<xref href=\"ASE.appArray.SetIntArray(System.Int32%2cSystem.Int32%2cSystem.Int32)\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"ASE.appArray.SetRealArray(System.Double%2cSystem.Int32%2cSystem.Int32)\" data-throw-if-not-resolved=\"false\"></xref>.</li>\n<li sourcefile=\"api/ase/ASE.appArray.yml\" sourcestartlinenumber=\"10\">Provide parameter processing helpers (<xref href=\"ASE.appArray.ProcessArrayParametersCompile(System.Boolean)\" data-throw-if-not-resolved=\"false\"></xref> and\n<xref href=\"ASE.appArray.ProcessArrayParametersExecute(System.Boolean)\" data-throw-if-not-resolved=\"false\"></xref>) used by peek/poke derived commands.</li>\n</ul>\n<p sourcefile=\"api/ase/ASE.appArray.yml\" sourcestartlinenumber=\"13\">Note: this class uses MessageBox calls to report user-visible errors to match the\nexisting application's UX conventions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ase/ASE.appBoose.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ase/ASE.appBoose.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appBoose",
+      "Summary": "<p sourcefile=\"api/ase/ASE.appBoose.yml\" sourcestartlinenumber=\"1\">Facade and runtime coordinator for the ASE application.\nManages the application canvas, command factory, parser and stored program.\nExposes a minimal API used by the UI to run parsed programs and retrieve the canvas bitmap.\nThis class implements a thread-safe lazy singleton via <xref href=\"ASE.appBoose.CreateInstance\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ase/ASE.appInt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ase/ASE.appInt.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appInt",
+      "Summary": "<p sourcefile=\"api/ase/ASE.appInt.yml\" sourcestartlinenumber=\"1\">Represents an integer variable/command in the ASE language.\nThe class can register itself with a <xref href=\"BOOSE.StoredProgram\" data-throw-if-not-resolved=\"false\"></xref> and updates the program value when executed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ase/ASE.appParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ase/ASE.appParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appParser",
+      "Summary": "<p sourcefile=\"api/ase/ASE.appParser.yml\" sourcestartlinenumber=\"1\">Application-specific parser that converts a single line of ASE language into an <xref href=\"BOOSE.ICommand\" data-throw-if-not-resolved=\"false\"></xref>.\nExtends the generic <xref href=\"BOOSE.Parser\" data-throw-if-not-resolved=\"false\"></xref> to add ASE-specific preprocessing, comment handling and\nassignment resolution where the left-hand side references an existing variable.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ase/ASE.appPeek.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ase/ASE.appPeek.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appPeek",
+      "Summary": "<p sourcefile=\"api/ase/ASE.appPeek.yml\" sourcestartlinenumber=\"1\">Implements the &quot;peek&quot; array command which reads a value from an existing array variable\nand assigns it into another variable.\nParsing of the textual parameters, index evaluation and array access are delegated to the helper logic\nimplemented on <xref href=\"ASE.appArray\" data-throw-if-not-resolved=\"false\"></xref>.\nThis command reports user-visible problems using MessageBox calls to match the existing application's UX.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ase/ASE.appPoke.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ase/ASE.appPoke.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appPoke",
+      "Summary": "<p sourcefile=\"api/ase/ASE.appPoke.yml\" sourcestartlinenumber=\"1\">Implements the &quot;poke&quot; array command which writes a value into an existing array variable.\nUses the array helper logic provided by <xref href=\"ASE.appArray\" data-throw-if-not-resolved=\"false\"></xref> to parse parameters at compile time\nand to perform the write at runtime.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ase/ASE.appReal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ase/ASE.appReal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appReal",
+      "Summary": "<p sourcefile=\"api/ase/ASE.appReal.yml\" sourcestartlinenumber=\"1\">Represents a real (double) variable in the ASE language.\nRegisters itself with the active <xref href=\"BOOSE.StoredProgram\" data-throw-if-not-resolved=\"false\"></xref> during compilation\nand updates the stored program value when executed.\nThe class exposes a <xref href=\"ASE.appReal.real\" data-throw-if-not-resolved=\"false\"></xref> property that holds the double backing value.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ase/ASE.appStoredProgram.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ase/ASE.appStoredProgram.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appStoredProgram",
+      "Summary": "<p sourcefile=\"api/ase/ASE.appStoredProgram.yml\" sourcestartlinenumber=\"1\">Application-specific <xref href=\"BOOSE.StoredProgram\" data-throw-if-not-resolved=\"false\"></xref> implementation.\nResponsibilities:</p>\n<ul sourcefile=\"api/ase/ASE.appStoredProgram.yml\" sourcestartlinenumber=\"3\">\n<li sourcefile=\"api/ase/ASE.appStoredProgram.yml\" sourcestartlinenumber=\"3\">Store and locate ASE variables.</li>\n<li sourcefile=\"api/ase/ASE.appStoredProgram.yml\" sourcestartlinenumber=\"4\">Maintain a separate double backing for <xref href=\"ASE.appReal\" data-throw-if-not-resolved=\"false\"></xref> variables and update both backing and textual value\nwhen <xref href=\"ASE.appStoredProgram.UpdateVariable(System.String%2cSystem.Double)\" data-throw-if-not-resolved=\"false\"></xref> is called.</li>\n<li sourcefile=\"api/ase/ASE.appStoredProgram.yml\" sourcestartlinenumber=\"6\">Evaluate numeric expressions substituting <xref href=\"ASE.appReal.real\" data-throw-if-not-resolved=\"false\"></xref> for real variables and <xref href=\"BOOSE.Evaluation.Value\" data-throw-if-not-resolved=\"false\"></xref>\nfor other variables before computing the result.</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ase/ASE.appWrite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ase/ASE.appWrite.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE.appWrite",
+      "Summary": "<p sourcefile=\"api/ase/ASE.appWrite.yml\" sourcestartlinenumber=\"1\">Implements the &quot;write&quot; command which outputs text to the canvas.\nExecution order:</p>\n<ul sourcefile=\"api/ase/ASE.appWrite.yml\" sourcestartlinenumber=\"3\">\n<li sourcefile=\"api/ase/ASE.appWrite.yml\" sourcestartlinenumber=\"3\">Attempt to evaluate the parameter as an expression via the program.</li>\n<li sourcefile=\"api/ase/ASE.appWrite.yml\" sourcestartlinenumber=\"4\">If the evaluation fails, treat the parameter as a variable name and write its value.</li>\n<li sourcefile=\"api/ase/ASE.appWrite.yml\" sourcestartlinenumber=\"5\">Otherwise treat the parameter as a literal text string and write it.</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ase/ASE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ase/ASE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASE",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/ase/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ase/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/ase/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/aseunittest/ASEUnitTest.arrayTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/aseunittest/ASEUnitTest.arrayTest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASEUnitTest.arrayTest",
+      "Summary": "<p sourcefile=\"api/aseunittest/ASEUnitTest.arrayTest.yml\" sourcestartlinenumber=\"1\">Unit tests for <xref href=\"ASE.appArray\" data-throw-if-not-resolved=\"false\"></xref>.\nExercises allocation, element read/write and bounds-checking behaviour for both integer and real arrays.\nTests use reflection helpers to set protected fields on the <xref href=\"BOOSE.Evaluation\" data-throw-if-not-resolved=\"false\"></xref> base so the command\ncan be exercised outside of the normal parser/compile flow.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/aseunittest/ASEUnitTest.intTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/aseunittest/ASEUnitTest.intTest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASEUnitTest.intTest",
+      "Summary": "<p sourcefile=\"api/aseunittest/ASEUnitTest.intTest.yml\" sourcestartlinenumber=\"1\">Unit tests for <xref href=\"ASE.appInt\" data-throw-if-not-resolved=\"false\"></xref>.\nVerifies variable registration in <xref href=\"BOOSE.StoredProgram\" data-throw-if-not-resolved=\"false\"></xref> and that updates to variables are reflected via the StoredProgram API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/aseunittest/ASEUnitTest.realTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/aseunittest/ASEUnitTest.realTest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASEUnitTest.realTest",
+      "Summary": "<p sourcefile=\"api/aseunittest/ASEUnitTest.realTest.yml\" sourcestartlinenumber=\"1\">Unit tests for <xref href=\"ASE.appReal\" data-throw-if-not-resolved=\"false\"></xref>.\nExercises registration, backing-value updates and expression evaluation that mixes real and int variables.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/aseunittest/ASEUnitTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/aseunittest/ASEUnitTest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ASEUnitTest",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/aseunittest/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/aseunittest/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/aseunittest/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

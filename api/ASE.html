@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace ASE | JWestobyBOOSE </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace ASE | JWestobyBOOSE ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="JWestobyBOOSE">
+            JWestobyBOOSE
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ASE">
+
+  <h1 id="ASE" data-uid="ASE" class="text-break">Namespace ASE</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ASE.ASECanvas.html">ASECanvas</a></dt>
+      <dd><p>Concrete application canvas that implements both <a class="xref" href="ASE.IappInterface.html">IappInterface</a> and <a class="xref" href="ASE.ISavableCanvas.html">ISavableCanvas</a>.
+Provides drawing primitives using GDI+ and maintains an internal bitmap for rendering.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ASE.AppCommandFactory.html">AppCommandFactory</a></dt>
+      <dd><p>Factory that maps command names used by the ASE language to concrete <span class="xref">BOOSE.ICommand</span> implementations.
+The factory returns the appropriate command object given a canonical command type string.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ASE.Ase_Form.html">Ase_Form</a></dt>
+      <dd><p>Main Windows Forms UI for the ASE application.
+Hosts the input textbox, execute/save buttons and a PictureBox used to display the canvas bitmap.
+Delegates execution and saving actions to <span class="xref">ASE.Ase_Form.appBoose</span>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ASE.NoCommand.html">NoCommand</a></dt>
+      <dd><p>Placeholder command used for lines that should be ignored (for example comment markers).
+Implements the basic command lifecycle but performs no action during Compile or Execute.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ASE.appAdapter.html">appAdapter</a></dt>
+      <dd><p>Adapts an object that implements <a class="xref" href="ASE.IappInterface.html">IappInterface</a> so it can be used where an <span class="xref">BOOSE.ICanvas</span> is required.
+All calls are forwarded to the wrapped <a class="xref" href="ASE.IappInterface.html">IappInterface</a> instance.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ASE.appArray.html">appArray</a></dt>
+      <dd><p>Base implementation for array support in the ASE language.
+Provides compile-time parsing and runtime handling for both integer and real arrays,
+and helper routines used by concrete array commands (peek/poke).</p>
+<p>Responsibilities:</p>
+<ul>
+<li>Parse and validate array declarations (type, name, size) during <a class="xref" href="ASE.appArray.html#ASE_appArray_Compile">Compile()</a>.</li>
+<li>Allocate array storage on <a class="xref" href="ASE.appArray.html#ASE_appArray_Execute">Execute()</a>.</li>
+<li>Support reading and writing array elements through <a class="xref" href="ASE.appArray.html#ASE_appArray_GetIntArray_System_Int32_System_Int32_">GetIntArray(int, int)</a>, <a class="xref" href="ASE.appArray.html#ASE_appArray_GetRealArray_System_Int32_System_Int32_">GetRealArray(int, int)</a>,
+<a class="xref" href="ASE.appArray.html#ASE_appArray_SetIntArray_System_Int32_System_Int32_System_Int32_">SetIntArray(int, int, int)</a> and <a class="xref" href="ASE.appArray.html#ASE_appArray_SetRealArray_System_Double_System_Int32_System_Int32_">SetRealArray(double, int, int)</a>.</li>
+<li>Provide parameter processing helpers (<a class="xref" href="ASE.appArray.html#ASE_appArray_ProcessArrayParametersCompile_System_Boolean_">ProcessArrayParametersCompile(bool)</a> and
+<a class="xref" href="ASE.appArray.html#ASE_appArray_ProcessArrayParametersExecute_System_Boolean_">ProcessArrayParametersExecute(bool)</a>) used by peek/poke derived commands.</li>
+</ul>
+<p>Note: this class uses MessageBox calls to report user-visible errors to match the
+existing application's UX conventions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ASE.appBoose.html">appBoose</a></dt>
+      <dd><p>Facade and runtime coordinator for the ASE application.
+Manages the application canvas, command factory, parser and stored program.
+Exposes a minimal API used by the UI to run parsed programs and retrieve the canvas bitmap.
+This class implements a thread-safe lazy singleton via <a class="xref" href="ASE.appBoose.html#ASE_appBoose_CreateInstance">CreateInstance()</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ASE.appInt.html">appInt</a></dt>
+      <dd><p>Represents an integer variable/command in the ASE language.
+The class can register itself with a <span class="xref">BOOSE.StoredProgram</span> and updates the program value when executed.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ASE.appParser.html">appParser</a></dt>
+      <dd><p>Application-specific parser that converts a single line of ASE language into an <span class="xref">BOOSE.ICommand</span>.
+Extends the generic <span class="xref">BOOSE.Parser</span> to add ASE-specific preprocessing, comment handling and
+assignment resolution where the left-hand side references an existing variable.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ASE.appPeek.html">appPeek</a></dt>
+      <dd><p>Implements the &quot;peek&quot; array command which reads a value from an existing array variable
+and assigns it into another variable.
+Parsing of the textual parameters, index evaluation and array access are delegated to the helper logic
+implemented on <a class="xref" href="ASE.appArray.html">appArray</a>.
+This command reports user-visible problems using MessageBox calls to match the existing application's UX.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ASE.appPoke.html">appPoke</a></dt>
+      <dd><p>Implements the &quot;poke&quot; array command which writes a value into an existing array variable.
+Uses the array helper logic provided by <a class="xref" href="ASE.appArray.html">appArray</a> to parse parameters at compile time
+and to perform the write at runtime.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ASE.appReal.html">appReal</a></dt>
+      <dd><p>Represents a real (double) variable in the ASE language.
+Registers itself with the active <span class="xref">BOOSE.StoredProgram</span> during compilation
+and updates the stored program value when executed.
+The class exposes a <a class="xref" href="ASE.appReal.html#ASE_appReal_real">real</a> property that holds the double backing value.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ASE.appStoredProgram.html">appStoredProgram</a></dt>
+      <dd><p>Application-specific <span class="xref">BOOSE.StoredProgram</span> implementation.
+Responsibilities:</p>
+<ul>
+<li>Store and locate ASE variables.</li>
+<li>Maintain a separate double backing for <a class="xref" href="ASE.appReal.html">appReal</a> variables and update both backing and textual value
+when <a class="xref" href="ASE.appStoredProgram.html#ASE_appStoredProgram_UpdateVariable_System_String_System_Double_">UpdateVariable(string, double)</a> is called.</li>
+<li>Evaluate numeric expressions substituting <a class="xref" href="ASE.appReal.html#ASE_appReal_real">real</a> for real variables and <span class="xref">BOOSE.Evaluation.Value</span>
+for other variables before computing the result.</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ASE.appWrite.html">appWrite</a></dt>
+      <dd><p>Implements the &quot;write&quot; command which outputs text to the canvas.
+Execution order:</p>
+<ul>
+<li>Attempt to evaluate the parameter as an expression via the program.</li>
+<li>If the evaluation fails, treat the parameter as a variable name and write its value.</li>
+<li>Otherwise treat the parameter as a literal text string and write it.</li>
+</ul>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ASE.ISavableCanvas.html">ISavableCanvas</a></dt>
+      <dd><p>Indicates that a canvas implementation can save its current bitmap to disk.
+Implementations should persist the visible canvas image to the provided file path.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ASE.IappInterface.html">IappInterface</a></dt>
+      <dd><p>Extended application canvas interface that exposes floating-point drawing primitives
+in addition to the standard <span class="xref">BOOSE.ICanvas</span> operations.
+Implementors are expected to provide both integer- and float-based circle/rectangle methods.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
